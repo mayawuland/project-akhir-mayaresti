@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const judul = document.getElementById('judul').value;
       const isi = document.getElementById('isi').value;
   
-      const response = await fetch('http://localhost:4000/pengaduan', {
+      const response = await fetch('https://pengaduan-ntddqgpccq-et.a.run.app/pengaduan', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     async function loadPengaduan() {
-      const response = await fetch('http://localhost:4000/pengaduan');
+      const response = await fetch('https://pengaduan-ntddqgpccq-et.a.run.app/pengaduan');
       const pengaduan = await response.json();
   
       pengaduanList.innerHTML = '';
