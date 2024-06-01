@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaint Center</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Complaint Center</h1>
+    <div class="button-container">
+      <button onclick="redirectToForm()">Form Pengaduan</button>
+      <button onclick="redirectToRespon()">Admin</button>
+    </div>
+  </div>
+
+  <!-- Pop-up modal -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Authentication Required</h2>
+      <p>Please enter authentication code:</p>
+      <input type="text" id="authCode">
+      <button onclick="checkAuthCode()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to redirect to pengaduan.html
+    function redirectToForm() {
+      window.location.href = 'pengaduan.html';
+    }
+
+    // Function to redirect to respon.html after authentication
+    function redirectToRespon() {
+      // Show authentication modal
+      document.getElementById('authModal').style.display = 'block';
+    }
+
+    // Function to close modal
+    function closeModal() {
+      document.getElementById('authModal').style.display = 'none';
+    }
+
+    // Function to check authentication code
+    function checkAuthCode() {
+      var authCode = document.getElementById('authCode').value;
+      if (authCode === 'ihjcraym') {
+        // Redirect to respon.html if authentication code is correct
+        window.location.href = 'respon.html';
+      } else {
+        alert('Invalid authentication code. Please try again.');
+      }
+    }
+  </script>
+</body>
+</html>

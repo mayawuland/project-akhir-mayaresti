@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengaduan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Daftar Pengaduan</h1>
+    <div id="pengaduanList"></div>
+  </div>
+
+  <div id="updateModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Pengaduan</h2>
+      <form id="updateForm">
+        <input type="hidden" id="updateId" name="updateId" required readonly>
+        <label for="updateRespon">Respon:</label>
+        <input type="text" id="updateRespon" name="updateRespon" required>
+        <label for="updateStatus">Status:</label>
+        <select id="updateStatus" name="updateStatus" required>
+          <option value="Diterima">Diterima</option>
+          <option value="Diproses">Diproses</option>
+          <option value="Selesai">Selesai</option>
+        </select>
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="respon.js"></script>
+</body>
+</html>

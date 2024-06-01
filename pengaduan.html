@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengaduan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Pengaduan</h1>
+    <form id="pengaduanForm">
+      <label for="judul">Judul:</label>
+      <input type="text" id="judul" name="judul" required>
+      <label for="isi">Isi:</label>
+      <textarea id="isi" name="isi" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <h2>Daftar Pengaduan</h2>
+    <div id="pengaduanList"></div>
+  </div>
+  <script src="pengaduan.js"></script>
+</body>
+</html>
