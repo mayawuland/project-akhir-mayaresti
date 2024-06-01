@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateForm = document.getElementById('updateForm');
   
     async function loadPengaduan() {
-      const response = await fetch('http://localhost:4000/respon');
+      const response = await fetch('https://respon-ntddqgpccq-et.a.run.app/respon');
       const pengaduan = await response.json();
   
       pengaduanList.innerHTML = '';
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const respon = document.getElementById('updateRespon').value;
       const status = document.getElementById('updateStatus').value;
   
-      const response = await fetch(`http://localhost:4000/respon/${id}`, {
+      const response = await fetch(`https://respon-ntddqgpccq-et.a.run.app/respon/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     window.deletePengaduan = async function (id) {
-      const response = await fetch(`http://localhost:4000/respon/${id}`, {
+      const response = await fetch(`https://respon-ntddqgpccq-et.a.run.app/respon/${id}`, {
         method: 'DELETE',
       });
   
